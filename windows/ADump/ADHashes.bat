@@ -32,9 +32,6 @@ ntds_decode -d %NTDS_DECODE_ROOT%\tmp\ntds.dit -s %NTDS_DECODE_ROOT%\tmp\SYSTEM
 :: send hashes.txt to OpenLDAP-Web for further processing
 pscp -i id_dsa.ppk hashes.txt %USER%@%HOST%:%REMOTE_PATH%/
 
-:: send adusers.ldf to OpenLDAP-Web for further processing
-:: pscp -i id_dsa.ppk adusers.ldf web12@ldap.zawiw.de:files/openldap/
-
 :: Call import routines on server
 plink -i id_dsa.ppk %USER%@%HOST% /usr/bin/python %REMOTE_PATH%/import.py
 
