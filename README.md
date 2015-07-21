@@ -29,7 +29,7 @@ Microsoft ActiveDirectory to OpenLDAP bridge/sync
 ## Requirements (All of them for the OpenLDAP-server)
 * gcc, make
 * openssl-dev
-* libdb5.3-dev
+* libdb-dev > v4.1
 * perl
 * python
 * ssh-server
