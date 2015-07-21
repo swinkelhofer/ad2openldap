@@ -26,9 +26,10 @@ Microsoft ActiveDirectory to OpenLDAP bridge/sync
 * Copy content from `id_dsa.pub` to `~/.ssh/known_hosts` to allow ActiveDirectory-server to connect via SSH
 * Now you AD-server executes the task, that dumps ActiveDirectory, sends dump to OpenLDAP-server, executes the `migrate.pl` to change format to OpenLDAP-conform format, calls `import.py` and deletes all temporary file. That's it
 
-## Requirements
+## Requirements (All of them for the OpenLDAP-server)
 * gcc, make
 * openssl-dev
+* libdb5.3-dev
 * perl
 * python
 * ssh-server
